@@ -68,9 +68,9 @@ function Author() {
     getAuthorList();
   }, []);
 
-  useEffect(() => {
-    getAuthorList();
-  }, [handleClick,removeFavourite]);
+  // useEffect(() => {
+  //   getAuthorList();
+  // }, [handleClick,removeFavourite]);
 
   return (
     <div className="author content">
