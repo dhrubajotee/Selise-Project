@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ListItemComponent from "../components/ListItemComponent";
-import "./Global.css";
+import './Global.css';
 import Pagination from "@material-ui/lab/Pagination";
 import { Grid } from "@material-ui/core";
 import axios from "axios";
