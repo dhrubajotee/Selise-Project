@@ -21,8 +21,6 @@ function Author() {
         setFullAuthorList(result);
       });
 
-
-
     const url = "https://api.quotable.io/authors?limit=10";
     const response = await fetch(url);
     const response_json = await response.json();
@@ -35,7 +33,7 @@ function Author() {
     let favt_author_list = JSON.parse(localStorage.getItem("favt_author"));
 
     if (favt_author_list) {
-      var match_result = result.filter(function (o1) {
+      let match_result = result.filter(function (o1) {
         return favt_author_list.some(function (o2) {
           if (o1._id === o2.value._id) {
             return (o1.add = 0);
@@ -52,7 +50,6 @@ function Author() {
     const id = value._id;
     let favt_author_list = JSON.parse(localStorage.getItem("favt_author"));
     if (favt_author_list) {
-      //favt_author_list.push(value);
       favt_author_list.push({
         id: id,
         value: value,
@@ -60,7 +57,6 @@ function Author() {
       localStorage.setItem(`favt_author`, JSON.stringify(favt_author_list));
     } else {
       let favrt_author_array = [];
-      //favrt_author_array[id] = value;
       favrt_author_array.push({
         id: id,
         value: value,
@@ -73,7 +69,6 @@ function Author() {
   const removeFavourite = (value) => {
     const id = value._id;
     let elements = JSON.parse(localStorage.getItem("favt_author"));
-    //elements = elements.filter(element => element.name !== name);
     elements = elements.filter((element) => element.id !== id);
     localStorage.setItem("favt_author", JSON.stringify(elements));
     setRefetch(!refetch);
@@ -96,7 +91,7 @@ function Author() {
         let favt_author_list = JSON.parse(localStorage.getItem("favt_author"));
     
         if (favt_author_list) {
-          var match_result = result.filter(function (o1) {
+          let match_result = result.filter(function (o1) {
             return favt_author_list.some(function (o2) {
               if (o1._id === o2.value._id) {
                 return (o1.add = 0);
@@ -108,10 +103,6 @@ function Author() {
           setAuthorList(result);
         }
       }
-      // setAuthorList({
-      //     ...response.data.results,
-      //   })
-      
       );
   };
 
@@ -142,6 +133,9 @@ function Author() {
               variant="outlined"
               shape="rounded"
               onChange={(e,pageNumber) => handlePageChange(e,pageNumber)}
+              size="large"
+              style={{paddingBottom:30}}
+              color='standard'
             />
           </Grid>
         </>

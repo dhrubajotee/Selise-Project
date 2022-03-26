@@ -10,7 +10,6 @@ function FavouriteAuthor() {
     const removeFavourite = (value) => {
         const id = value._id;
         let elements = JSON.parse(localStorage.getItem("favt_author"));
-        //elements = elements.filter(element => element.name !== name);
         elements = elements.filter((element) => element.id !== id);
         localStorage.setItem("favt_author", JSON.stringify(elements));
         setRefetch(!refetch);

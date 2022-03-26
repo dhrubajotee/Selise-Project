@@ -6,10 +6,6 @@ import { Card, Typography, Grid } from "@material-ui/core";
 function ListItemComponent({ authorList, handleClick, removeFavourite }) {
   return (
     <>
-      {/* <Row xs={2}>
-          <Card variant="outlined">{card}</Card>
-        </Row> */}
-
       <div style={{ paddingLeft: 25 }} className="site-card-wrapper">
         <Grid container spacing={2} columns={12}>
           {authorList.map((value, index) => {
