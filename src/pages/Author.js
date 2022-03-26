@@ -135,7 +135,7 @@ function Author() {
               onChange={(e,pageNumber) => handlePageChange(e,pageNumber)}
               size="large"
               style={{paddingBottom:30}}
-              color='standard'
+              color="primary"
             />
           </Grid>
         </>
