@@ -37,7 +37,7 @@ function ListItemComponent({ authorList, handleClick, removeFavourite }) {
                             className="success-btn"
                             onClick={(e) => handleClick(value)}
                             variant="contained"
-                            style={{backgroundColor:"#26a69a", color:"white"}}
+                            style={{backgroundColor:"#26a69a", color:"white",paddingLeft:1}}
                             size="small"
                           >
                             <i className="fa fa-plus"></i> Add Favorite
@@ -50,7 +50,7 @@ function ListItemComponent({ authorList, handleClick, removeFavourite }) {
                             className="danger-btn"
                             onClick={(e) => removeFavourite(value)}
                             variant="contained"
-                            style={{backgroundColor:"#c93a1a",color:"white"}}
+                            style={{backgroundColor:"#c93a1a",color:"white",paddingLeft:1}}
                             size="small"
                           >
                             <i className="fa fa-plus"></i> Remove Favorite
