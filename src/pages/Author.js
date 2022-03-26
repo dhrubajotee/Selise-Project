@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ListItemComponent from "../components/ListItemComponent";
 import "./Global.css";
 import Pagination from "@material-ui/lab/Pagination";
-import { Container, Grid, TextField } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import axios from "axios";
 
 function Author() {
@@ -128,7 +128,7 @@ function Author() {
 
   return (
     <div className="author content">
-      <h3 style={{ marginBottom: 10 }}>Authors</h3>
+      <h1 style={{ marginBottom: 10, textAlign:"center", padding:12 }}>Authors</h1>
       {fullAuthorList && authorList ? (
         <>
           <ListItemComponent

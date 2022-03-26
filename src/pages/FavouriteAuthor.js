@@ -5,6 +5,7 @@ import ListItemComponent from '../components/ListItemComponent';
 function FavouriteAuthor() {
     
     const [favouriteAuthorList,setFavouriteAuthorList] = useState();
+    const [refetch, setRefetch] = useState(false);
 
     const removeFavourite = (value) => {
         const id = value._id;
@@ -12,6 +13,7 @@ function FavouriteAuthor() {
         //elements = elements.filter(element => element.name !== name);
         elements = elements.filter((element) => element.id !== id);
         localStorage.setItem("favt_author", JSON.stringify(elements));
+        setRefetch(!refetch);
       };
     
 
@@ -22,14 +24,17 @@ function FavouriteAuthor() {
             favt_author_list.map((item,index)=>{
                 favt_author.push(item.value)
             })
+            favt_author.map((item,index)=>{
+              item.add = 0
+            })
             setFavouriteAuthorList(favt_author);
         }
        
-    },[]);
+    },[refetch]);
 
   return (
     <div className='favourite-author content'>
-      <h3 style={{marginBottom:10}}>Favourite Authors</h3>
+      <h1 style={{ marginBottom: 10, textAlign:"center", padding:12 }}>Favourite Authors</h1>
       {favouriteAuthorList?<ListItemComponent authorList={favouriteAuthorList} handleClick={null} removeFavourite={removeFavourite} /> : <></>}
     </div>
   )

@@ -15,10 +15,10 @@
 
   .success-btn{
     float: right;
-    background-color:#249654;
     color:white;
     border-radius: 1px;
     padding: 2;
+    background-color: #4db6ac;
   }
 
   .danger-btn{
