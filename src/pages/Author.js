@@ -27,7 +27,7 @@ function Author() {
     const result = response_json.results;
 
     result.map((value, index) => {
-      return (value.add = 1);
+      value.add = 1
     });
 
     let favt_author_list = JSON.parse(localStorage.getItem("favt_author"));
@@ -38,7 +38,6 @@ function Author() {
           if (o1._id === o2.value._id) {
             return (o1.add = 0);
           }
-          return 1;
         });
       });
       setAuthorList(result);
@@ -86,7 +85,7 @@ function Author() {
       .then((response) =>{
         let result = response.data.results;
         result.map((value, index) => {
-          return (value.add = 1);
+          value.add = 1
         });
     
         let favt_author_list = JSON.parse(localStorage.getItem("favt_author"));
@@ -97,7 +96,6 @@ function Author() {
               if (o1._id === o2.value._id) {
                 return (o1.add = 0);
               }
-              return 1;
             }
             
             );
