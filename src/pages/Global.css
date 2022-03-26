@@ -17,16 +17,15 @@
     float: right;
     background-color:#249654;
     color:white;
-    border-radius: 2px;
-    padding: 5px;
+    border-radius: 1px;
+    padding: 2;
   }
 
   .danger-btn{
     float: right;
     background-color:#c93a1a;
     color:white;
-    border-radius: 2px;
-    padding: 5px;
+    border-radius: 1px;
   }
   
 
