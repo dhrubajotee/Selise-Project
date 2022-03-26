@@ -26,18 +26,19 @@ function Author() {
     const response_json = await response.json();
     const result = response_json.results;
 
-    const final_data = result.map((value, index) => {
+    result.map((value, index) => {
       return (value.add = 1);
     });
 
     let favt_author_list = JSON.parse(localStorage.getItem("favt_author"));
 
     if (favt_author_list) {
-      let match_result = result.filter(function (o1) {
+      result.filter(function (o1) {
         return favt_author_list.some(function (o2) {
           if (o1._id === o2.value._id) {
             return (o1.add = 0);
           }
+          return 1;
         });
       });
       setAuthorList(result);
@@ -84,19 +85,22 @@ function Author() {
       )
       .then((response) =>{
         let result = response.data.results;
-        let final_data = result.map((value, index) => {
+        result.map((value, index) => {
           return (value.add = 1);
         });
     
         let favt_author_list = JSON.parse(localStorage.getItem("favt_author"));
     
         if (favt_author_list) {
-          let match_result = result.filter(function (o1) {
+          result.filter(function (o1) {
             return favt_author_list.some(function (o2) {
               if (o1._id === o2.value._id) {
                 return (o1.add = 0);
               }
-            });
+              return 1;
+            }
+            
+            );
           });
           setAuthorList(result);
         } else {

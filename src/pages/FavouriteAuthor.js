@@ -21,10 +21,15 @@ function FavouriteAuthor() {
         if(favt_author_list){
             let favt_author = [];
             favt_author_list.map((item,index)=>{
+              return(
                 favt_author.push(item.value)
+              )
+                
             })
             favt_author.map((item,index)=>{
-              item.add = 0
+              return(
+                item.add = 0
+              )
             })
             setFavouriteAuthorList(favt_author);
         }

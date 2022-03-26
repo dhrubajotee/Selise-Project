@@ -19,10 +19,10 @@ function App() {
         <Router>
           <Navbar />
           <Routes>       
-            {/* <Route path="/" element={<Navigate to="author" />} /> */}
+            <Route path="/" element={<Navigate to="author" />} />
             <Route path="/author" element={<Author />} />
             <Route path="/favourite-author" element={<FavouriteAuthor />} />
-            {/* <Route path="*" element={<Navigate to="author" />} /> */}
+            <Route path="*" element={<Navigate to="author" />} />
           </Routes>
         </Router>
       </React.Suspense>
