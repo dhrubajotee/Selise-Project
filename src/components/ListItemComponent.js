@@ -1,6 +1,6 @@
 import React from "react";
 import "../pages/Global.css";
-import Button from "@mui/material/Button";
+import Button from "@material-ui/core/Button";
 import { Card, Typography, Grid } from "@material-ui/core";
 
 function ListItemComponent({ authorList, handleClick, removeFavourite }) {
@@ -37,7 +37,7 @@ function ListItemComponent({ authorList, handleClick, removeFavourite }) {
                             className="success-btn"
                             onClick={(e) => handleClick(value)}
                             variant="contained"
-                            style={{backgroundColor:"#26a69a"}}
+                            style={{backgroundColor:"#26a69a", color:"white"}}
                             size="small"
                           >
                             <i className="fa fa-plus"></i> Add Favorite
@@ -50,7 +50,7 @@ function ListItemComponent({ authorList, handleClick, removeFavourite }) {
                             className="danger-btn"
                             onClick={(e) => removeFavourite(value)}
                             variant="contained"
-                            color="error"
+                            style={{backgroundColor:"#c93a1a",color:"white"}}
                             size="small"
                           >
                             <i className="fa fa-plus"></i> Remove Favorite
