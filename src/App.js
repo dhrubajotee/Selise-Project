@@ -7,8 +7,6 @@ import {
   Route,
   Navigate
 } from "react-router-dom";
-// import Author from "./pages/Author";
-// import FavouriteAuthor from "./pages/FavouriteAuthor";
 
 const Author = React.lazy(()=> import("./pages/Author"));
 const FavouriteAuthor = React.lazy(()=> import("./pages/FavouriteAuthor"));
