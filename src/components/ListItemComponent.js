@@ -18,7 +18,6 @@ function ListItemComponent({ authorList, handleClick, removeFavourite }) {
                       // width: "540px",
                       width: "90%",
                       // display:"flex",
-                      maxHeight: 380,
                       paddingBottom: 20,
                       paddingLeft: 15,
                       paddingRight: 15,
