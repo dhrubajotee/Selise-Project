@@ -15,7 +15,8 @@ function ListItemComponent({ authorList, handleClick, removeFavourite }) {
                   <Card
                     style={{
                       height: "flex",
-                      width: "540px",
+                      // width: "540px",
+                      width: "60%",
                       paddingBottom: 20,
                       paddingLeft: 15,
                       paddingRight: 15,
