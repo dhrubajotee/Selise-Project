@@ -18,7 +18,19 @@
     color:white;
     border-radius: 1px;
     background-color: #4db6ac;
+    display:block;
   }
+
+  @media all and (max-width:10em){
+    Button.success-btn{
+    display:block;
+    margin:0.4em auto;
+    }
+    Button.danger-btn{
+      display:block;
+      margin:0.4em auto;
+      }
+    }
 
   .danger-btn{
     float: right;

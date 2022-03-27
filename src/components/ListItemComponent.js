@@ -41,7 +41,7 @@ function ListItemComponent({ authorList, handleClick, removeFavourite }) {
                             onClick={(e) => handleClick(value)}
                             variant="contained"
                             style={{backgroundColor:"#26a69a", color:"white",paddingLeft:1}}
-                            size="xs"
+                            size="small"
                           >
                             <i className="fa fa-plus"></i> Add Favorite
                           </Button>
@@ -54,7 +54,7 @@ function ListItemComponent({ authorList, handleClick, removeFavourite }) {
                             onClick={(e) => removeFavourite(value)}
                             variant="contained"
                             style={{backgroundColor:"#c93a1a",color:"white",paddingLeft:1}}
-                            size="xs"
+                            size="small"
                           >
                             <i className="fa fa-plus"></i> Remove Favorite
                           </Button>
